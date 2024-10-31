@@ -4,6 +4,11 @@
 %define ENDL 0x0A, 0x0D
 
 start:
+    ; clear the screen
+    mov ah, 0x00
+    mov al, 0x03
+    int 0x10
+
     mov si, TestString
     call print_string
     jmp $ 
