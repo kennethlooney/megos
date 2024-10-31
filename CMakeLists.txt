@@ -19,7 +19,7 @@ add_custom_command(
 add_custom_command(
     OUTPUT loader.bin
     COMMAND ${NASM_EXECUTABLE} -f bin -I ${CMAKE_CURRENT_SOURCE_DIR}/boot ${CMAKE_CURRENT_SOURCE_DIR}/boot/loader.asm -o ${CMAKE_CURRENT_BINARY_DIR}/loader.bin
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/boot/loader.asm ${CMAKE_CURRENT_SOURCE_DIR}/boot/print.asm ${CMAKE_CURRENT_SOURCE_DIR}/boot/readdisk.asm
+    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/boot/loader.asm ${CMAKE_CURRENT_SOURCE_DIR}/boot/print.asm ${CMAKE_CURRENT_SOURCE_DIR}/boot/readdisk.asm ${CMAKE_CURRENT_SOURCE_DIR}/boot/cpuid.asm ${CMAKE_CURRENT_SOURCE_DIR}/boot/simplepaging.asm
     COMMENT "Assembling loader.asm"
 )
 # Add custom target that depends on the output of the custom command
