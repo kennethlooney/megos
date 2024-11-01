@@ -1,9 +1,8 @@
 DetectCPUID:
+// Detect if CPU supports CPUID instruction
     pushfd
     pop eax
-
     mov ecx, eax
-
     xor eax, 1 << 21
 
     push eax
@@ -27,6 +26,6 @@ DetectLongMode:
     ret
 
 NoLongMode:
-    hlt             ; Halt the CPU
+    hlt                         ; Halt the CPU
 NoCPUID:
-   hlt              ; Halt the CPU
+    hlt                         ; Halt the CPU

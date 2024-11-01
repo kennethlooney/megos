@@ -24,7 +24,7 @@ start:
     call print_string
     call wait_for_key
 
-    jmp LOADER_SPACE
+    jmp 0x7e00
     
 
 wait_for_key:
